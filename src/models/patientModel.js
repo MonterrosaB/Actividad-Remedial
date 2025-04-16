@@ -6,7 +6,7 @@ import { Schema, model } from "mongoose";
 
 const patientModel = new Schema({
     name: {
-        type : Date,
+        type : String,
         required : true
     },
     age : {

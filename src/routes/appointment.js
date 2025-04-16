@@ -1,14 +1,14 @@
-import express, { Router } from "express";
+import express from "express";
 import appointmentController from "../controllers/appointmentController.js"
 
 const router = express.Router()
 
 router.route("/")
-.get()
-.post()
+.get(appointmentController.getAppointments)
+.post(appointmentController.creareAppointment)
 
 router.route("/:id")
-.put()
-.delete()
+.put(appointmentController.updateAppointment)
+.delete(appointmentController.deleteAppointment)
 
-export default Router;
+export default router;

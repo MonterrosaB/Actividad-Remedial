@@ -7,10 +7,10 @@ import { Schema, model } from "mongoose";
 
 const doctorModel = new Schema({
     name: {
-        type : Date,
+        type : String,
         required : true
     },
-    age : {
+    specialty : {
         type : String
     },
     email :  {

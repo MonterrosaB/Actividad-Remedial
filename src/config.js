@@ -11,17 +11,11 @@ export const config = {
         PORT : process.env.PORT
     },
     JWT : {
-        SECRET : process.env.SECRET,
+        SECRET : process.env.JWT_SECRET, 
         EXPIRES : process.env.JWT_EXPIRES
-    },
-    ADMIN:{
-        PASSWORD : process.env.PASSWORD,
-        EMAIL : process.env.ADMIN_EMAIL
     },
     MAIL : {
         USER : process.env.USER,
         PASSWORD : process.env.PASSWORD
-    }
-
-    
+    } 
 }

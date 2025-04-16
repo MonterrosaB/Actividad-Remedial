@@ -1,14 +1,17 @@
-import express, { Router } from "express";
+import express from "express";
 import patientController from "../controllers/patientController.js"
 
 const router = express.Router()
 
 router.route("/")
-.get()
-.post()
+.get(patientController.getPatients)
+.post(patientController.createtPatient)
 
 router.route("/:id")
-.put()
-.delete()
+.put(patientController.updatePatient)
+.delete(patientController.deletePatient)
 
-export default Router;
+router.route("/verifyCodeEmail").post(patientController.verifyCodeEmail)
+
+
+export default router;
